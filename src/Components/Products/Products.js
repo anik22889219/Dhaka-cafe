@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import data from '../../data/product.json'
 import Card from '../Card/Card';
+import Category from '../Category/Category';
 
 const Products = () => {
     const [products,setProducts] = useState([])
@@ -10,9 +11,12 @@ const Products = () => {
         .then(res => res.json())
         .then(data => setProducts(data))
     },[]);
-    console.log(products)
+    // console.log(products)
     return (
         <div className='mx-5'>
+            <div>
+               <Category key={products.id} products={products} ></Category>
+            </div>
             <h1 className='mt-6 b-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white text-start'>All Products</h1>
             <div className='grid sm:grid-cols-2 lg:grid-cols-3 justify-center gap-5 mt-8'>
             {

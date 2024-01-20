@@ -5,7 +5,7 @@ const Card = (props) => {
     const {name,img,price,quantity,seller,}=props.product
     const imgUrl = `product-picture/${img}.jpg`
 
-    console.log(imgUrl)
+    // console.log(imgUrl)
     return (
         <div className='w-[360px] bg-green-400 flex items-center flex-col justify-around mx-auto p-3  rounded-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-green-600 duration-300  '>
             <div>
