@@ -9,8 +9,9 @@ import ContactUs from './Components/ContactUs/ContactUs';
 function App() {
   return (
     <div className="App">
-      <Header></Header>
+      
       <Main>
+      <Header></Header>
         <Routes>
 
           <Route path="/" element={<Home />} />
