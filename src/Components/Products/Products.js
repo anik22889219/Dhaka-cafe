@@ -2,16 +2,12 @@ import React, { useEffect, useState } from 'react';
 import data from '../../data/product.json'
 import Card from '../Card/Card';
 import Category from '../Category/Category';
+import useProducts from '../hooks/useProducts';
 
 const Products = () => {
-    const [products,setProducts] = useState([])
+    const [products,setProducts] = useProducts()
 
-    useEffect(()=>{
-        fetch('product.json')
-        .then(res => res.json())
-        .then(data => setProducts(data))
-    },[]);
-    // console.log(products)
+    
     return (
         <div className='mx-5'>
             <div>
