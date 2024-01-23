@@ -13,7 +13,7 @@ const Category = (props) => {
     const coffees = products.filter(product => product.category===coffee);
     const tea = 'Mini Coffee'
     const teas = products.filter(product => product.category===tea);
-    console.log(miniCafes,coffees,teas);
+    // console.log(miniCafes,coffees,teas);
     
     return (
         <div>
