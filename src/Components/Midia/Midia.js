@@ -1,6 +1,5 @@
-import { Carousel } from "@material-tailwind/react";
+import { Carousel,boolean } from "@material-tailwind/react";
 import useProducts from '../hooks/useProducts';
-import pic from '../../category-img/coffee-category.png'
 import MidiaPost from "../MidiaPost/MidiaPost";
 
 
@@ -8,17 +7,10 @@ import MidiaPost from "../MidiaPost/MidiaPost";
 function UncontrolledExample() {
 
     const [products,setProduct]= useProducts()
-// console.log(products)
 
-// useEffect(() => {
-//     const slideInterval = setInterval(() => {
-//        nextSlide()
-//     }, 5000);
-//     return () => clearInterval(slideInterval);
-//   }, [slideIndex]);
   return (
     <div>
- <Carousel transition={{ duration: 2 }} className="rounded-xl "  navigation={({ setActiveIndex, activeIndex, length }) => (
+ <Carousel autoplay autoplayDelay={5000}    transition={{ duration: 0.5 }} loop className="rounded-xl "  navigation={({ setActiveIndex, activeIndex, length }) => (
         <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
           {new Array(length).fill("").map((_, i) => (
             <span
