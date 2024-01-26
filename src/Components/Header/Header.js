@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div className='sticky top-0 z-10'>
+        <div className='sticky top-0 z-10 '>
             <Navber></Navber>
         </div>
     );

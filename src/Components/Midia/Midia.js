@@ -1,5 +1,5 @@
 import { Carousel,boolean } from "@material-tailwind/react";
-import useProducts from '../hooks/useProducts';
+import useProducts from '../../hooks/useProducts';
 import MidiaPost from "../MidiaPost/MidiaPost";
 
 

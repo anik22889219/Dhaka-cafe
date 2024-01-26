@@ -11,7 +11,7 @@ const Navber = () => {
     const [open,setOpen] = useState(false)
   
     return (
-        <nav className='flex justify-between items-center px-5 bg-green-500  py-2 text-white font-semibold  rounded-t-xl'>
+        <nav className='flex justify-between items-center px-5 bg-green-500  py-2 text-white font-semibold  rounded-t-xl '>
             <div className=' flex-wrap w-52'>
                 <img className='' src={Dhakacaffe} alt="Dhaka-caffe" />
             </div>
