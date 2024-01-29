@@ -9,7 +9,7 @@ import ContactUs from './Components/ContactUs/ContactUs';
 
 function App() {
   return (
-    <div className="mx-auto">
+    <div className="mx-auto bg-green-100">
       
       <Main>
       <Header></Header>
