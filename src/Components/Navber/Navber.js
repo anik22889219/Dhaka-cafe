@@ -17,11 +17,12 @@ const Navber = () => {
             </div>
             
             
-            <ul className={` md:flex md:justify-end justify-between absolute md:static w-full duration-0 ease-in  bg-green-500 py-2 ${open ? 'top-14 flex justify-around right-0 ':'top-[-120px] right-0 flex justify-around'}`}>
-                <li onClick={()=> setOpen(!open)} className='pe-6 text-center hover:text-yellow-500'><Link to="/">Home</Link></li>
-                <li onClick={()=> setOpen(!open)} className='pe-6 text-center hover:text-yellow-500'><Link to="/products">Products</Link></li>
-                <li onClick={()=> setOpen(!open)} className='pe-6 text-center hover:text-yellow-500'><Link to="/aboutUs">About Us</Link></li>
-                <li onClick={()=> setOpen(!open)} className='pe-6 text-center hover:text-yellow-500'><Link to="/contactUs">Contact Us</Link></li>
+            <ul className={` md:flex md:justify-end  absolute md:static   bg-green-500 py-2 ${open ? 'top-16  flex  flex-col md:flex-row w-1/2 h-[850px] md:h-auto justify-items-start items-start  right-0 rounded-lg   ':'top-[-120px] right-0 flex  justify-around'}`}>
+                <li onClick={()=> setOpen(!open)} className='pe-6 md:text-center mx-auto mb-10 md:mx-0 md:mb-0 hover:text-yellow-500'><Link to="/">Home</Link></li>
+                <li onClick={()=> setOpen(!open)} className='pe-6 md:text-center mx-auto mb-10 md:mx-0 md:mb-0 hover:text-yellow-500'><Link to="/products">Products</Link></li>
+                <li onClick={()=> setOpen(!open)} className='pe-6 md:text-center mx-auto mb-10 md:mx-0 md:mb-0 hover:text-yellow-500'><Link to="/orders">Orders</Link></li>
+                <li onClick={()=> setOpen(!open)} className='pe-6 md:text-center mx-auto mb-10 md:mx-0 md:mb-0 hover:text-yellow-500'><Link to="/aboutUs">About Us</Link></li>
+                <li onClick={()=> setOpen(!open)} className='pe-6 md:text-center mx-auto mb-10 md:mx-0 md:mb-0 hover:text-yellow-500'><Link to="/contactUs">Contact Us</Link></li>
                 
             
             </ul>

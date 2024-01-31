@@ -5,6 +5,7 @@ import Home from './Components/Home/Home';
 import Products from './Components/Products/Products';
 import AboutUs from './Components/AboutUs/AboutUs';
 import ContactUs from './Components/ContactUs/ContactUs';
+import OrdersReview from './Components/OrdersReview/OrdersReview';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products></Products>} />
+          <Route path="/orders" element={<OrdersReview></OrdersReview>} />
           <Route path="/aboutUs" element={<AboutUs></AboutUs>} />
           <Route path="/contactUs" element={<ContactUs></ContactUs>} />
           <Route path="*" element={'404'} />
