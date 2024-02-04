@@ -3,12 +3,23 @@ import menu from '../../icon/menu-2-outline 1.svg'
 import closer from '../../icon/close.svg'
 import Dhakacaffe from '../../icon/dhaka.png'
 import { Link, NavLink } from 'react-router-dom';
+import useLocalstorage from '../../hooks/useLocalstorage';
+import useProducts from '../../hooks/useProducts';
 
 
 
 
 const Navber = () => {
     const [open,setOpen] = useState(false)
+    const [products, setProducts] = useProducts();
+    const[card,setCard] = useLocalstorage(products);
+    let orders;
+  if(card.length===0){
+    orders='';
+  }
+  else{
+    
+  }
   
     return (
         <nav className='flex justify-between items-center px-5 bg-green-500  py-2 text-white font-semibold  rounded-t-xl '>
