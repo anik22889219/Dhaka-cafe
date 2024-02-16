@@ -9,51 +9,34 @@ import OrdersReview from './Components/OrdersReview/OrdersReview';
 import { GoogleAuthProvider, getAuth, signInWithPopup, signOut } from "firebase/auth";
 import app from './firebase.init.';
 import { useState } from 'react';
+import Login from './Components/Login/Login';
+import RequireAuth from './Components/RequerAuth/RequerAuth';
+import Signin from './Components/Sign-in/Signin';
 
 
 
-// const auth = getAuth(app);
-const auth = getAuth(app)
+
 function App() {
-  const [user,SetUser] = useState({});
-  console.log(user)
-
   
-  const hendelSingin =()=>{
-    const googleProvider = new GoogleAuthProvider();
-    signInWithPopup(auth,googleProvider)
-    .then(result=>{
-      const user = result.user;
-      SetUser(user);
-      console.log(user)
-    })
-    .catch(error=>{
-      console.error('error')
-    })
-// console.log('clicked')
-  }
-  const hendelSingout= ()=>{
-    signOut(auth)
-    .then(result=>{
-      SetUser({});
-    })
-    .catch(error=>{
-      SetUser({})
-    })
-  }
 
   return (
     <div className="mx-auto bg-green-100">
       
       <Main>
-      <Header hendelSingin={hendelSingin} key={user.uid} user={user} hendelSingout={hendelSingout}></Header>
+      <Header></Header>
         <Routes>
 
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products></Products>} />
-          <Route path="/orders" element={<OrdersReview></OrdersReview>} />
+          <Route path="/orders" element={
+            <RequireAuth>
+              <OrdersReview></OrdersReview>
+            </RequireAuth>
+          } />
           <Route path="/aboutUs" element={<AboutUs></AboutUs>} />
           <Route path="/contactUs" element={<ContactUs></ContactUs>} />
+          <Route path="/login" element={<Login></Login>} />
+          <Route path="/singin" element={<Signin></Signin>}></Route>
           <Route path="*" element={'404'} />
 
          </Routes>

@@ -7,7 +7,7 @@ const Header = ({hendelSingin,user,hendelSingout}) => {
 
     return (
         <div className='sticky top-0 z-10 '>
-            <Navber hendelSingin={hendelSingin} user={user} hendelSingout ={hendelSingout}></Navber>
+            <Navber></Navber>
         </div>
     );
 };
